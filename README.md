@@ -1,27 +1,17 @@
-# Pgs
+Just a project where I make stuff for personal use / fun.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+What is in here->
 
-## Development server
+nav - nav
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+homepage - just a homepage, says Hi
 
-## Code scaffolding
+gs *gear switcher - simulating an oldschool runescape inventory
+    > includes 3 gear sets melee/ranged/mage
+    > click items to equip
+    > highlighted color shows which set they belong to (red - melee, green - ranged, blue - mage)
+    > simulates runescapes 0.6 second tick system
+    > can drag around items, but if you drag when you let go you will equip the item (bug)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+json validator - validates JSON
+    > I wanted some way to validate large JSON data without using an online tool because I dont know if they are collecting the data.
