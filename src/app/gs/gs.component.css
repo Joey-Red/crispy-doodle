@@ -1,0 +1,26 @@
+* {
+  overflow: hidden !important;
+}
+.canvas-container {
+  display: flex;
+  gap: 16px;
+  height: calc(100vh - 32px);
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/bg2.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat-y;
+  background-color: black;
+
+  /* > canvas {
+    padding: 12px;
+  } */
+}
+
+@media screen and (max-width: 550px) {
+  .canvas-container {
+    flex-direction: column;
+  }
+}

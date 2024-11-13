@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>JSON Linter</h1>
+  <div class="editor">
+    <div class="editor-wrapper">
+      <div class="line-numbers">
+        @for (line of num_lines_as_arr; track $index) {
+        <div [ngClass]="{ highlighted: highlightedLine === line }">
+          {{ line + 1 }}
+        </div>
+        }
+      </div>
+      <textarea
+        [(ngModel)]="jsonInput"
+        (input)="updateLineNumbers()"
+        (scroll)="syncScroll()"
+        (keyup)="onKeyUp($event)"
+        (click)="onKeyUp($event)"
+        (ngModelChange)="lintResult = null"
+      ></textarea>
+    </div>
+  </div>
+  <br />
+  <button (click)="lintJson()">Validate JSON</button>
+  @if(lintResult){
+  <div>
+    @if(!lintResult.valid){
+    <div class="allocated-space">
+      <div class="error">
+        <p style="color: red">
+          Error: {{ lintResult.error }} <br />
+          Line: {{ lintResult.lineNumber }}
+        </p>
+      </div>
+    </div>
+    } @else if(lintResult.valid && jsonInput){
+    <div class="allocated-space">
+      <div class="good">
+        <p style="color: green">JSON is valid.</p>
+      </div>
+    </div>
+    }
+  </div>
+  } @else {
+  <div class="allocated-space"></div>
+  }
+</div>
