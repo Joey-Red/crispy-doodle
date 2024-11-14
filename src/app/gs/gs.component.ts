@@ -543,6 +543,7 @@ export class GsComponent implements AfterViewInit {
             );
 
             // Once all images are loaded, copy the offscreen canvas to the main canvas
+
             if (loadedImages === totalImages) {
               ctx.clearRect(0, 0, canvas.width, canvas.height);
               ctx.drawImage(offscreenCanvas, 0, 0);
