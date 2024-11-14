@@ -1,0 +1,41 @@
+* {
+  font-size: large;
+  width: fit-content;
+}
+.outside-container {
+  width: 100vw;
+  background-color: #0078d7;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  color: white;
+  flex-direction: column;
+  gap: 28px;
+  height: calc(100vh - 32px);
+  padding: 24ch;
+  display: flex;
+  justify-content: center;
+}
+.sub-container {
+  gap: 8px;
+  display: flex;
+}
+
+.fcc {
+  display: flex;
+  align-items: center;
+}
+
+.stack {
+  flex-direction: column;
+  display: flex;
+  /* justify-content: space-between; */
+  height: 100%;
+}
+
+img {
+  /* max-height: 33vh; */
+  max-height: 108px;
+  /* object-fit: contain; */
+}
