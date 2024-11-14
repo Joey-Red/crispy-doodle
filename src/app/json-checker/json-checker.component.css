@@ -6,7 +6,7 @@
   height: calc(100vh - 32px);
   width: 100vw;
   justify-content: center;
-  background-color: #131313;
+  background-color: red;
 }
 .editor {
   display: flex;
