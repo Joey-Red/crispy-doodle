@@ -9,5 +9,5 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'gs', component: GsComponent },
   { path: 'json', component: JsonCheckerComponent },
-  { path: '404', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent },
 ];
