@@ -1,0 +1,16 @@
+<div class="container">
+  <p class="challenge fcc">The quick brown fox jumps over the lazy dog</p>
+
+  <div class="rocket-container">
+    <p
+      [ngStyle]="{ 'margin-left': completion_percentage + 'vw' }"
+      id="rocket"
+      #rocket
+    >
+      [Rocket]
+    </p>
+  </div>
+  <div class="answer fcc">
+    <input [(ngModel)]="answer" (ngModelChange)="UpdatePercentage()" />
+  </div>
+</div>

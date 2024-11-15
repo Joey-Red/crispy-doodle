@@ -13,10 +13,6 @@
   background-position: center;
   background-repeat: repeat-y;
   background-color: black;
-
-  /* > canvas {
-    padding: 12px;
-  } */
 }
 
 @media screen and (max-width: 550px) {

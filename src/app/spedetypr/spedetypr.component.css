@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  gap: 16px;
+  height: calc(100vh - 32px);
+  width: 100vw;
+  background-color: black;
+  flex-direction: column;
+}
+
+.fcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.challenge {
+  height: 100%;
+  background: rgb(41, 41, 41);
+}
+
+.answer {
+  height: 100%;
+  background: rgb(22, 22, 22);
+  > input {
+    border: solid white 2px;
+  }
+}
+
+.rocket-container {
+  width: 100%;
+  background-color: red;
+}
+
+#rocket {
+  background-color: aqua;
+  width: fit-content;
+}
