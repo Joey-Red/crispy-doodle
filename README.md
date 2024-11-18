@@ -16,6 +16,7 @@ gs *gear switcher - simulating an oldschool runescape inventory
 json validator - validates JSON
     > I wanted some way to validate large JSON data without using an online tool because I dont know if they are collecting the data.
 
+speed typer - type the sentence
 
 
 
