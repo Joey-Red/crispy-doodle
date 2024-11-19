@@ -1,3 +1,39 @@
-nav > a:hover {
+nav > a:hover,
+.other-title:hover {
   text-decoration: underline;
+}
+
+a {
+  min-width: fit-content;
+}
+
+.other {
+  position: relative;
+}
+
+.other:hover {
+  .dropdown-link-container {
+    display: flex;
+  }
+}
+
+.dropdown-link-container {
+  display: none;
+  flex-direction: column;
+  left: -4px;
+  position: absolute;
+  background-color: #212121;
+  padding: 8px;
+  border-radius: 0 0 4px 4px;
+  z-index: 999;
+}
+
+.dropdown-link {
+  min-width: max-content;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.dropdown-link:hover {
+  background-color: #464646;
 }

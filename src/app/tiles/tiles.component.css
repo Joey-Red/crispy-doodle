@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  gap: 16px;
+  height: calc(100vh - 32px);
+  width: 100vw;
+  /* justify-content: center; */
+  background-color: #131313;
+  color: white;
+}
+
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  border: solid salmon 2px;
+  gap: 4px;
+  /* max-height: 100%; */
+  /* max-width: 100%; */
+  flex-grow: 1;
+}
+
+.tile {
+  border-radius: 4px;
+  border: solid salmon 2px;
+}
