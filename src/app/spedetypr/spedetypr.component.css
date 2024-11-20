@@ -125,3 +125,13 @@
     margin-right: 0px;
   }
 }
+
+@media screen and (max-width: 960px) {
+  .answer {
+    height: auto;
+    > textarea {
+      height: auto;
+      width: 100%;
+    }
+  }
+}

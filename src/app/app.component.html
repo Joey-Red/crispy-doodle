@@ -11,8 +11,17 @@
   "
 >
   @for (link of ShownNavItems; track $index) {
-  <a [href]="link.link">{{ link.title }}</a
-  >/ }
+  <a [href]="link.link">{{ link.title }}</a>
+  @if($index !== ShownNavItems.length - 1){
+  <!--  -->
+  /
+  <!--  -->
+  }
+  <!--  -->
+  }
+
+  <!--  -->
+  @if(ExtraNavItems.length > 0){ /
   <div class="other">
     <p class="other-title">fun</p>
     <div class="dropdown-link-container">
@@ -21,6 +30,7 @@
       }
     </div>
   </div>
+  }
 </nav>
 
 <router-outlet />

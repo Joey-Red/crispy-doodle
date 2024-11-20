@@ -30,12 +30,18 @@
 .stack {
   flex-direction: column;
   display: flex;
-  /* justify-content: space-between; */
   height: 100%;
 }
 
 img {
-  /* max-height: 33vh; */
   max-height: 108px;
-  /* object-fit: contain; */
+}
+
+@media screen and (max-width: 960px) {
+  .sub-container {
+    flex-direction: column;
+  }
+  .container {
+    gap: 0px;
+  }
 }

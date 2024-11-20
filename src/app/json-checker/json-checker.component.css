@@ -109,3 +109,9 @@ button:hover {
   background: #f1f1f1;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 960px) {
+  .editor {
+    width: 80vw;
+  }
+}
