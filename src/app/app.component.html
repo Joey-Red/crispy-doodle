@@ -10,11 +10,27 @@
     height: 32px;
   "
 >
-  <a href="/home">home</a>
+  @for (link of ShownNavItems; track $index) {
+  <a [href]="link.link">{{ link.title }}</a>
+  @if($index !== ShownNavItems.length - 1){
+  <!--  -->
   /
-  <a href="/gs">gear switcher</a>
-  /
-  <a href="/json">validate json</a>
+  <!--  -->
+  }
+  <!--  -->
+  }
+
+  <!--  -->
+  @if(ExtraNavItems.length > 0){ /
+  <div class="other">
+    <p class="other-title">fun</p>
+    <div class="dropdown-link-container">
+      @for (extra of ExtraNavItems; track $index) {
+      <a class="dropdown-link" [href]="extra.link">{{ extra.title }}</a>
+      }
+    </div>
+  </div>
+  }
 </nav>
 
 <router-outlet />

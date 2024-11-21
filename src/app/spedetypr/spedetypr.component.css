@@ -1,0 +1,137 @@
+.container {
+  display: flex;
+  height: calc(100vh - 32px);
+  width: 100vw;
+  flex-direction: column;
+  position: relative;
+}
+
+.fcc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.challenge {
+  height: 100%;
+  background: #212121;
+  user-select: none;
+}
+
+.sentence {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  max-height: 80%;
+  user-select: none;
+}
+
+.answer {
+  height: 100%;
+  background: #212121;
+  padding: 0px 20px 20px 20px;
+  > textarea {
+    border: solid white 2px;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    color: white;
+  }
+}
+
+.rocket-container {
+  width: 100%;
+  overflow: hidden;
+  min-height: fit-content;
+  background: linear-gradient(to right, black, rgb(48, 47, 47));
+  position: relative;
+}
+
+.star {
+  position: absolute;
+}
+
+#rocket {
+  height: 10ch;
+  width: 120px;
+}
+
+.correct {
+  color: #76e976;
+}
+
+.incorrect {
+  color: #f57b7b;
+}
+
+.default {
+  color: white;
+}
+
+.reset-container {
+  width: 100%;
+  display: flex;
+  background-color: #212121;
+  justify-content: flex-end;
+  padding: 8px 0px;
+}
+
+.score-container {
+  width: 100%;
+  display: flex;
+  background-color: #212121;
+  justify-content: center;
+  padding: 8px 0px;
+  color: white;
+}
+
+.reset {
+  margin-right: 20px;
+  width: fit-content;
+  padding: 8px;
+  border: solid white 2px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.finished-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #363636b4;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.finished {
+  background-color: black;
+  z-index: 10;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  gap: 4px;
+  > .reset {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .answer {
+    height: auto;
+    > textarea {
+      height: auto;
+      width: 100%;
+    }
+  }
+}

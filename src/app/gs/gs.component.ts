@@ -194,7 +194,7 @@ export class GsComponent implements AfterViewInit {
 
     // Load background image and draw it to cover the entire canvas
     const backgroundImage = new Image();
-    backgroundImage.src = '/assets/Inventory_tab.png'; // Replace with your background image path
+    backgroundImage.src = './assets/Inventory_tab.png'; // Replace with your background image path
     backgroundImage.onload = () => {
       // Draw the background image stretched to fit the entire canvas
       offscreenCtx.drawImage(
@@ -364,7 +364,7 @@ export class GsComponent implements AfterViewInit {
     offscreenCanvas.height = canvas.height;
 
     const backgroundImage = new Image();
-    backgroundImage.src = '/assets/Inventory_tab.png';
+    backgroundImage.src = './assets/Inventory_tab.png';
     backgroundImage.onload = () => {
       offscreenCtx.drawImage(
         backgroundImage,
@@ -483,7 +483,7 @@ export class GsComponent implements AfterViewInit {
 
     // Load background image and draw it to cover the entire canvas
     const backgroundImage = new Image();
-    backgroundImage.src = '/assets/Worn_Equipment_tab.png'; // Background image
+    backgroundImage.src = './assets/Worn_Equipment_tab.png'; // Background image
 
     // Ensure the background is loaded before proceeding
     backgroundImage.onload = () => {
@@ -543,6 +543,7 @@ export class GsComponent implements AfterViewInit {
             );
 
             // Once all images are loaded, copy the offscreen canvas to the main canvas
+
             if (loadedImages === totalImages) {
               ctx.clearRect(0, 0, canvas.width, canvas.height);
               ctx.drawImage(offscreenCanvas, 0, 0);
@@ -558,168 +559,168 @@ export class GsComponent implements AfterViewInit {
     {
       name: 'Neitiznot faceguard',
       slot: slot.helm,
-      link: '/assets/Neitiznotfaceguard.png',
+      link: './assets/Neitiznotfaceguard.png',
       outline: 'red',
     },
     {
       name: 'Amulet of torture',
       slot: slot.amulet,
-      link: '/assets/Amuletoftorture.png',
+      link: './assets/Amuletoftorture.png',
       outline: 'red',
     },
     {
       name: 'Infernal Cape',
       slot: slot.cape,
-      link: '/assets/InfernalCape.png',
+      link: './assets/InfernalCape.png',
       outline: 'red',
     },
     {
       name: 'Fighter torso',
       slot: slot.body,
-      link: '/assets/Fightertorso.png',
+      link: './assets/Fightertorso.png',
       outline: 'red',
     },
     {
       name: 'Obsidian platelegs',
       slot: slot.legs,
-      link: '/assets/Obsidianplatelegs.png',
+      link: './assets/Obsidianplatelegs.png',
       outline: 'red',
     },
     {
       name: 'Ghrazi rapier',
       slot: slot.weapon,
-      link: '/assets/Ghrazirapier.png',
+      link: './assets/Ghrazirapier.png',
       outline: 'red',
     },
     {
       name: 'Dragonfire shield',
       slot: slot.shield,
-      link: '/assets/Dragonfireshield.png',
+      link: './assets/Dragonfireshield.png',
       outline: 'red',
     },
     {
       name: 'Ferocious gloves',
       slot: slot.gloves,
-      link: '/assets/Ferociousgloves.png',
+      link: './assets/Ferociousgloves.png',
       outline: 'red',
     },
     {
       name: 'Primordial boots',
       slot: slot.boots,
-      link: '/assets/Primordialboots.png',
+      link: './assets/Primordialboots.png',
       outline: 'red',
     },
     {
       name: 'Berserker ring',
       slot: slot.ring,
-      link: '/assets/Berserkerring.png',
+      link: './assets/Berserkerring.png',
       outline: 'red',
     },
     {
       name: 'Elder maul',
       slot: slot.weapon,
       dual: true,
-      link: '/assets/Eldermaul.png',
+      link: './assets/Eldermaul.png',
       outline: 'red',
     },
     // ranged set
     {
       name: 'Crystal helm',
       slot: slot.helm,
-      link: '/assets/Crystalhelm.png',
+      link: './assets/Crystalhelm.png',
       outline: 'green',
     },
     {
       name: 'Necklace of anguish',
       slot: slot.amulet,
-      link: '/assets/Necklaceofanguish.png',
+      link: './assets/Necklaceofanguish.png',
       outline: 'green',
     },
     {
       name: "Dizana's quiver",
       slot: slot.cape,
-      link: "/assets/Dizana'squiver.png",
+      link: "./assets/Dizana'squiver.png",
       outline: 'green',
     },
     {
       name: 'Crystal body',
       slot: slot.body,
-      link: '/assets/Crystalbody.png',
+      link: './assets/Crystalbody.png',
       outline: 'green',
     },
     {
       name: 'Crystal legs',
       slot: slot.legs,
-      link: '/assets/Crystallegs.png',
+      link: './assets/Crystallegs.png',
       outline: 'green',
     },
     {
       name: 'Bow of faerdhinen',
       slot: slot.weapon,
       dual: true,
-      link: '/assets/Bowoffaerdhinen.png',
+      link: './assets/Bowoffaerdhinen.png',
       outline: 'green',
     },
     {
       name: 'Zaryte vambraces',
       slot: slot.gloves,
-      link: '/assets/Zarytevambraces.png',
+      link: './assets/Zarytevambraces.png',
       outline: 'green',
     },
     {
       name: 'Venator Ring',
       slot: slot.ring,
-      link: '/assets/VenatorRing.png',
+      link: './assets/VenatorRing.png',
       outline: 'green',
     },
     // mage set
     {
       name: 'Ancestral hat',
       slot: slot.helm,
-      link: '/assets/Ancestralhat.png',
+      link: './assets/Ancestralhat.png',
       outline: 'blue',
     },
     {
       name: 'Occult necklace',
       slot: slot.amulet,
-      link: '/assets/Occultnecklace.png',
+      link: './assets/Occultnecklace.png',
       outline: 'blue',
     },
     {
       name: 'Imbued god cape',
       slot: slot.cape,
-      link: '/assets/Imbuedgodcape.png',
+      link: './assets/Imbuedgodcape.png',
       outline: 'blue',
     },
     {
       name: 'Ancestral robe top',
       slot: slot.body,
-      link: '/assets/Ancestralrobetop.png',
+      link: './assets/Ancestralrobetop.png',
       outline: 'blue',
     },
     {
       name: 'Ancestral robe bottom',
       slot: slot.legs,
-      link: '/assets/Ancestralrobebottom.png',
+      link: './assets/Ancestralrobebottom.png',
       outline: 'blue',
     },
     {
       name: "Tumeken's shadow",
       slot: slot.weapon,
       dual: true,
-      link: "/assets/Tumeken'sshadow.png",
+      link: "./assets/Tumeken'sshadow.png",
       outline: 'blue',
     },
     {
       name: 'Tormented bracelet',
       slot: slot.gloves,
-      link: '/assets/Tormentedbracelet.png',
+      link: './assets/Tormentedbracelet.png',
       outline: 'blue',
     },
     {
       name: 'Magus ring',
       slot: slot.ring,
-      link: '/assets/Magusring.png',
+      link: './assets/Magusring.png',
       outline: 'blue',
     },
   ];

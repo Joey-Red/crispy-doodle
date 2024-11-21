@@ -1,0 +1,54 @@
+<div class="container">
+  @if (GameOver){
+  <div class="finished-container">
+    <div class="finished">
+      <p>Accuracy: {{ score.toFixed() }}%</p>
+      <button class="reset" (click)="Reset(true)">Reset</button>
+    </div>
+  </div>
+  }
+  <div class="challenge fcc">
+    <div class="sentence">
+      @if(begin){ @for (letter of chosen_sentence; track $index) {
+      <p
+        [ngClass]="
+          answer[$index] === letter
+            ? 'correct'
+            : answer[$index] !== letter && answer.length > $index
+            ? 'incorrect'
+            : 'default'
+        "
+        [style.textDecoration]="answer.length === $index ? 'underline' : ''"
+      >
+        @if (letter === ' '){ &nbsp; } @else {
+        {{ letter }}
+        }
+      </p>
+      } } @else {
+      <div class="reset-container">
+        <button class="reset" style="margin-right: 0px" (click)="begin = true">
+          Start
+        </button>
+      </div>
+      }
+    </div>
+  </div>
+  <div class="rocket-container" #rocketcontainer>
+    <img
+      [ngStyle]="{ 'margin-left': completion_percentage + 'vw' }"
+      id="rocket"
+      #rocket
+      src="./assets/rocket.svg"
+      alt="rocket"
+    />
+  </div>
+  <div class="reset-container">
+    <button class="reset" (click)="Reset()">Reset</button>
+  </div>
+  <div class="answer fcc">
+    <textarea
+      [(ngModel)]="answer"
+      (ngModelChange)="UpdatePercentage()"
+    ></textarea>
+  </div>
+</div>

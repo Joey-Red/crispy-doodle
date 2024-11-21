@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="tile-container">
+    @for (tile of tiles; track $index) {
+    <div class="tile">
+      <div class="overlay"></div>
+      <div class="link">
+        <a [href]="tile.link">
+          {{ tile.title }}
+        </a>
+      </div>
+      <img [src]="tile.background" />
+    </div>
+    }
+  </div>
+</div>
