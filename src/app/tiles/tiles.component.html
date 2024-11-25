@@ -1,15 +1,20 @@
-<div class="container">
-  <div class="tile-container">
-    @for (tile of tiles; track $index) {
-    <div class="tile">
-      <div class="overlay"></div>
-      <div class="link">
-        <a [href]="tile.link">
+<div class="outside-container">
+  <div class="container">
+    <div class="tile-container">
+      @for (tile of tiles; track $index) {
+      <a [href]="tile.link">
+        <div class="tile">
+          <div class="overlay"></div>
+          <div class="link">
+            <!-- <a [href]="tile.link">
           {{ tile.title }}
-        </a>
-      </div>
-      <img [src]="tile.background" />
+        </a> -->
+            {{ tile.title }}
+          </div>
+          <img [src]="tile.background" />
+        </div>
+      </a>
+      }
     </div>
-    }
   </div>
 </div>

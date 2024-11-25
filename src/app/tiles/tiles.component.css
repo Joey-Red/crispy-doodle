@@ -1,7 +1,14 @@
+.outside-container {
+  background: url("https://images.unsplash.com/photo-1542416409-400da26855b5?w=auto0&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyOHxGa1dYRzVUUjIwNHx8ZW58MHx8fHx8")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .container {
   display: flex;
-  width: 100vw;
-  background-color: #131313;
   color: white;
   box-sizing: border-box;
 }
@@ -10,18 +17,36 @@
   display: flex;
   flex-wrap: wrap;
   border-radius: 4px;
+  max-width: 100%;
   width: 100%;
   gap: 12px;
   padding: 12px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  max-height: calc(100vh - 32px);
+
+  overflow-y: auto;
 }
 
 .tile {
   border-radius: 4px;
-  border: solid salmon 2px;
   box-sizing: border-box;
-  flex-grow: 1;
-  width: 30%;
+  min-width: 25vw;
+  max-width: 25vw;
+  display: flex;
   position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.tile:hover {
+  .overlay {
+    background-color: #b24aa921;
+  }
+  img {
+    opacity: 1;
+  }
 }
 
 .overlay {
@@ -31,6 +56,11 @@
   bottom: 0;
   right: 0;
   background-color: #13131375;
+  -webkit-transition: background-color 250ms linear;
+  -moz-transition: background-color 250ms linear;
+  -o-transition: background-color 250ms linear;
+  -ms-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
 }
 
 .link {
@@ -42,11 +72,38 @@
   text-align: center;
   background-color: black;
   width: 100%;
-  padding: 4px;
+  padding: 12px;
   display: flex;
   justify-content: center;
 }
 
 img {
+  display: flex;
   margin: auto;
+  opacity: 0.85;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .tile {
+    min-width: 80vw;
+    max-width: 80vw;
+  }
 }
