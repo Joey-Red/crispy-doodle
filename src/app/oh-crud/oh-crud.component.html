@@ -1,0 +1,18 @@
+<div class="container">
+  @for (post of posts; track $index) {
+  <div class="post">
+    <div class="user-info">
+      <img
+        class="profile-pic"
+        [alt]="post.creator.name"
+        [src]="post.creator.img"
+      />
+      <p>{{ post.creator.name }}</p>
+      |
+      <p>{{ post.title }}</p>
+      <p>{{ post.post_date.toFormat("DATETIME_SHORT") }}</p>
+    </div>
+    <p>{{ post.body }}</p>
+  </div>
+  }
+</div>

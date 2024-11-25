@@ -44,7 +44,7 @@
 .rocket-container {
   width: 100%;
   overflow: hidden;
-  min-height: fit-content;
+  min-height: 10ch;
   background: linear-gradient(to right, black, rgb(48, 47, 47));
   position: relative;
 }
