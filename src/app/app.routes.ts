@@ -5,6 +5,7 @@ import { JsonCheckerComponent } from './json-checker/json-checker.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SpedetyprComponent } from './spedetypr/spedetypr.component';
 import { TilesComponent } from './tiles/tiles.component';
+import { OhCrudComponent } from './oh-crud/oh-crud.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,5 +14,6 @@ export const routes: Routes = [
   { path: 'json', component: JsonCheckerComponent },
   { path: 'speed', component: SpedetyprComponent },
   { path: 'tile', component: TilesComponent },
+  { path: 'oh-crud', component: OhCrudComponent },
   { path: '**', component: NotFoundComponent },
 ];

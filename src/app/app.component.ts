@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
     { link: '#/json', title: 'json' },
     { link: '#/speed', title: 'speed' },
     { link: '#/tile', title: 'tile mode' },
+    { link: '#/oh-crud', title: 'oh crud' },
     { link: '#/404', title: '404' },
   ];
 
