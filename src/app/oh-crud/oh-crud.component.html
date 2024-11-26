@@ -1,18 +1,77 @@
 <div class="container">
-  @for (post of posts; track $index) {
-  <div class="post">
-    <div class="user-info">
-      <img
-        class="profile-pic"
-        [alt]="post.creator.name"
-        [src]="post.creator.img"
-      />
-      <p>{{ post.creator.name }}</p>
-      |
-      <p>{{ post.title }}</p>
-      <p>{{ post.post_date.toFormat("DATETIME_SHORT") }}</p>
+  <div class="posts-container">
+    @for (post of posts; track $index) {
+    <div class="post">
+      <div class="pic-container">
+        <img
+          class="profile-pic"
+          [alt]="post.creator.name"
+          [src]="post.creator.img"
+        />
+      </div>
+      <div class="content">
+        <div class="user-info">
+          <p class="info">
+            <span style="color: white; margin-right: 4px; font-weight: bold">{{
+              post.creator.name
+            }}</span>
+            &commat;{{ post.creator.name }}
+          </p>
+          <p class="info">
+            •
+            {{ post.post_date.toFormat("yyyy LLL dd") }}
+          </p>
+        </div>
+        <div class="title-body">
+          <p>{{ post.title }}</p>
+          <p>{{ post.body }}</p>
+        </div>
+        <div class="action-bar">
+          <div>
+            <button class="action-button">
+              <span class="material-symbols-outlined"> forum </span>
+            </button>
+            <span>{{ post.num_comments }}</span>
+          </div>
+          <div>
+            <button class="action-button">
+              <span class="material-symbols-outlined"> sync </span>
+            </button>
+            <span>{{ post.num_shares }}</span>
+          </div>
+          <div>
+            <button class="action-button">
+              <span class="material-symbols-outlined"> heart_plus </span>
+            </button>
+            <span>{{ post.num_likes }}</span>
+          </div>
+          <div>
+            <div>
+              <button class="action-button">
+                <span class="material-symbols-outlined"> bookmarks </span>
+              </button>
+            </div>
+            <div>
+              <button class="action-button">
+                <span class="material-symbols-outlined"> ios_share </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <p>{{ post.body }}</p>
+    }
   </div>
-  }
+
+  <div class="sidebar">
+    <div
+      style="
+        width: 250px;
+        height: 300px;
+        background-color: red;
+        position: sticky;
+        top: 0;
+      "
+    ></div>
+  </div>
 </div>
