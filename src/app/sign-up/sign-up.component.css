@@ -1,0 +1,80 @@
+.sign-up-container {
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  position: relative;
+  height: 72px;
+  display: flex;
+  background-color: rgba(243, 90, 70, 0.945);
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  font-weight: bolder;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+}
+
+.buttons {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  > .create-button {
+    display: flex;
+    padding: 4px 16px;
+    border-radius: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    -webkit-transition: background-color 250ms linear;
+    -moz-transition: background-color 250ms linear;
+    -o-transition: background-color 250ms linear;
+    -ms-transition: background-color 250ms linear;
+    transition: background-color 250ms linear;
+    color: white;
+    border: solid white 1px;
+    &:hover {
+      background-color: #131313;
+      border: solid transparent 1px;
+      color: rgba(243, 90, 70, 0.945);
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.action-container {
+  display: flex;
+  justify-content: space-between;
+  width: 33vw;
+}
+
+@media screen and (max-width: 960px) {
+  .sign-up-container {
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  .message {
+    > p {
+      width: calc(100vw - 120px);
+      font-size: medium;
+      padding: 12px;
+    }
+  }
+  .close {
+    top: 4px;
+    right: 4px;
+    transform: scale(0.8);
+  }
+}

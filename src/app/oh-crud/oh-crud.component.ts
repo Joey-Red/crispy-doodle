@@ -2,11 +2,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DateTime } from 'luxon';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 
 @Component({
   selector: 'app-oh-crud',
   standalone: true,
-  imports: [FormsModule, HttpClientModule],
+  imports: [FormsModule, HttpClientModule, SignUpComponent],
   templateUrl: './oh-crud.component.html',
   styleUrl: './oh-crud.component.css',
 })
@@ -17,10 +18,13 @@ export class OhCrudComponent implements OnInit {
   ngOnInit(): void {
     this.GetUsers();
     this.GetPosts();
+    this.CheckSignUp();
   }
 
+  // @Output() show_sign_up = new EventEmitter<boolean>();
   test_users: User[] = [];
   posts: crud[] = [];
+  show_sign_up: boolean = false;
 
   GetUsers = () => {
     this.http.get<User[]>(`${this.url}/users`).subscribe((res) => {
@@ -35,6 +39,14 @@ export class OhCrudComponent implements OnInit {
       }
       this.posts = res;
     });
+  };
+
+  CheckSignUp = () => {
+    // check if signed up / am i doing anon / ip ?
+    setTimeout(() => {
+      this.show_sign_up = true;
+    }, 50);
+    // }, 5000);
   };
 }
 
