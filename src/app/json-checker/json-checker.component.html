@@ -21,6 +21,7 @@
   </div>
   <br />
   <button (click)="lintJson()">Validate JSON</button>
+  <button (click)="CollapseJson()">Collapse JSON</button>
   @if(lintResult){
   <div>
     @if(!lintResult.valid){

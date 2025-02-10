@@ -34,6 +34,11 @@ export class JsonCheckerComponent {
     this.updateLineNumbers();
   }
 
+  CollapseJson = () => {
+    this.jsonInput = JSON.stringify(JSON.parse(this.jsonInput));
+    this.updateLineNumbers();
+  };
+
   syncScroll() {
     const textarea = document.querySelector('textarea');
     const lineNumbers = document.querySelector('.line-numbers');

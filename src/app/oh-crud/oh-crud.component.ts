@@ -2,12 +2,18 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DateTime } from 'luxon';
+import { CreatePostComponent } from '../create-post/create-post.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
 
 @Component({
   selector: 'app-oh-crud',
   standalone: true,
-  imports: [FormsModule, HttpClientModule, SignUpComponent],
+  imports: [
+    FormsModule,
+    HttpClientModule,
+    SignUpComponent,
+    CreatePostComponent,
+  ],
   templateUrl: './oh-crud.component.html',
   styleUrl: './oh-crud.component.css',
 })

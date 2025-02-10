@@ -1,7 +1,19 @@
 <div class="outermost-container">
   <div class="outside-container">
     <div class="left-sidebar sidebar">
-      <div class="box-1"></div>
+      <div class="box-1">
+        <img
+          class="ad-img logo-img"
+          alt="fake-ad"
+          src="../../assets/logo2.jpeg"
+          alt="logo"
+        />
+        <div class="sidebar-button-container">
+          <button class="sidebar-button">Home</button>
+          <button class="sidebar-button">Subscriptions</button>
+          <button class="sidebar-button">Popular Now</button>
+        </div>
+      </div>
     </div>
     <div class="container">
       <div class="posts-container">
@@ -82,10 +94,21 @@
     </div>
 
     <div class="right-sidebar sidebar">
-      <div class="box-2"></div>
+      <div class="box-2">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1675278299389-4165d19f59d2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="fake-ad"
+          class="ad-img"
+        />
+        <p>Jabroni's Pizza</p>
+      </div>
     </div>
   </div>
   @if(show_sign_up){
   <app-sign-up (show_sign_up)="show_sign_up = false"></app-sign-up>
+  } @if(!show_sign_up){
+  <button class="create-button">Create</button>
   }
 </div>
+
+<app-create-post></app-create-post>
